@@ -48,7 +48,6 @@ def convert_from_hex(hex_str: str) -> str:
 
     return ascii_str
 
-# Takes in 2 strings in character format -> returns hex string of XOR
 def xor_strings(string1: str, string2: str) -> str:
     if len(string1) != len(string2):
         raise ValueError(f"Strings are not the same length: {len(string1)} and {len(string2)}")
