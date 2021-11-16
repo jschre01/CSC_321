@@ -3,12 +3,19 @@ from Crypto.Cipher import AES
 
 def main():
     key = generate_key(16)
-    iv = generate_key(8)
+    iv = generate_key(16)
     string = input("Enter a string to submit: ")
     encrypted = submit(string, key, iv)
     print(encrypted)
     string = input("Enter a string to verify: ")
-    result = verify(string, key, iv)
+    if string == "same":
+        result = verify(encrypted, key, iv)
+    elif string == "flip":
+        flip = '\x00'*4 + '\x01' + '\x00' * 5 + '\x01' + '\x00' *5
+        new = (int.from_bytes(bytes(encrypted.encode('latin')), "big") ^ int.from_bytes(flip, "big")).to_bytes(16, "big").decode('latin')
+        result = verify(new, key, iv)
+    else:
+        result = verify(string, key, iv)
     print(result)
 
 
@@ -31,7 +38,8 @@ def verify(string, key, iv):
     byte_string = bytearray(string.encode('latin'))
     text = cbc_decrypt(byte_string, key, iv)
     print(text)
-    if "admin=true" in text:
+    text = text.decode('utf-8')
+    if ";admin=true" in text:
         return True
     else:
         return False
@@ -40,11 +48,11 @@ def verify(string, key, iv):
 
 def cbc_decrypt(text, key, iv):
     decrypt = AES.new(key, AES.MODE_CBC, iv)
-    string = ""
-    for i in range(0, len(text), 16):
-        pt = (int.from_bytes(decrypt.decrypt(int.from_bytes(text[i:i+16], "big")), "big") ^ int.from_bytes(iv, "big"))
-        print(type(pt))
-        iv = text[i:i+16]
+    string = decrypt.decrypt(text)
+    #for i in range(0, len(text), 16):
+    #    pt = (int.from_bytes(decrypt.decrypt(int.from_bytes(text[i:i+16], "big")), "big") ^ int.from_bytes(iv, "big"))
+    #    print(type(pt))
+    #    iv = text[i:i+16]
     return string
 
 
