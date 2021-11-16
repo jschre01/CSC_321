@@ -13,6 +13,8 @@ def main():
         file_cbc = open("cbc_encrypt.bmp", "wb")
         plaintext = f.read()
         text = pkcs(plaintext)
+        file_ecb.write(bmp_header)
+        file_cbc.write(bmp_header)
     else:
         f = open(in_file, 'r')
         file_ecb = open("ecb_encrypt.txt", "wb")
@@ -20,8 +22,12 @@ def main():
         plaintext = f.read()
         text = pkcs(bytearray(plaintext.encode('utf-8')))
 
-    ecb_encrypt(text, file_ecb, bmp_header)
-    cbc_encrypt(text, file_cbc, bmp_header)
+
+
+    key = generate_key(16)
+    iv = generate_key(8)
+    ecb_encrypt(text, file_ecb, key)
+    cbc_encrypt(text, file_cbc, key, iv)
 
     f.close()
     file_ecb.close()
@@ -40,21 +46,15 @@ def pkcs(plaintext):
 def generate_key(num_bytes:int) -> bytes:
     return get_random_bytes(num_bytes)
 
-def cbc_encrypt(text, outfile, bmp_header):
-    if bmp_header != None:
-        outfile.write(bmp_header)
-    cbc_key = generate_key(16)
-    iv = generate_key(8)
-    encrypt = AES.new(cbc_key, AES.MODE_ECB)
+def cbc_encrypt(text, outfile, key, iv):
+    encrypt = AES.new(key, AES.MODE_ECB)
     for i in range(0, len(text), 16):
         iv = encrypt.encrypt((int.from_bytes(bytes(text[i:i+16]), "big") ^ int.from_bytes(iv, "big")).to_bytes(16, "big"))
         outfile.write(iv)
 
-def ecb_encrypt(text, outfile, bmp_header):
-    if bmp_header != None:
-        outfile.write(bmp_header)
+def ecb_encrypt(text, outfile, key):
     ecb_key = generate_key(16)
-    encrypt = AES.new(ecb_key, AES.MODE_ECB)
+    encrypt = AES.new(key, AES.MODE_ECB)
     for i in range(0, len(text), 16):
         outfile.write(encrypt.encrypt(text[i:i+16]))
     
