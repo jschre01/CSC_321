@@ -1,6 +1,11 @@
 from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES
 
+
+
+'''User gets to choose any arbitary string to submit. They get back the encrypted version. They can choose to enter 'same', which will automatically decrypt the string that they entered, and check to verify it. They can choose 'flip' which will flip the correct bits in the ciphertext in order to verify the user, but only if the user enters the string ':admin<true'. It will flip the : to ; and the < to = for the user to get past verify. The user can also enter any arbitrary string that they want to verify, which will probably cause an error as they must get the padding scheme correct.'''
+
+
 def main():
     key = generate_key(16)
     iv = generate_key(16)
@@ -12,8 +17,12 @@ def main():
         result = verify(encrypted, key, iv)
     elif string == "flip":
         flip = '\x00'*4 + '\x01' + '\x00' * 5 + '\x01' + '\x00' *5
-        new = (int.from_bytes(bytes(encrypted.encode('latin')), "big") ^ int.from_bytes(flip, "big")).to_bytes(16, "big").decode('latin')
-        result = verify(new, key, iv)
+        flip = bytearray(flip.encode('utf-8'))
+        arg1 = int.from_bytes(bytearray(encrypted.encode('latin'))[:16], "big")
+        arg2 =  int.from_bytes(flip, "big")
+        new = (arg1 ^ arg2).to_bytes(16, "big").decode('latin')
+        encrypted = new + encrypted[16:]
+        result = verify(encrypted, key, iv)
     else:
         result = verify(string, key, iv)
     print(result)
@@ -38,7 +47,7 @@ def verify(string, key, iv):
     byte_string = bytearray(string.encode('latin'))
     text = cbc_decrypt(byte_string, key, iv)
     print(text)
-    text = text.decode('utf-8')
+    text = text.decode('latin')
     if ";admin=true" in text:
         return True
     else:
