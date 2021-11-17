@@ -1,10 +1,7 @@
 from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES
 
-
-
 '''User gets to choose any arbitary string to submit. They get back the encrypted version. They can choose to enter 'same', which will automatically decrypt the string that they entered, and check to verify it. They can choose 'flip' which will flip the correct bits in the ciphertext in order to verify the user, but only if the user enters the string ':admin<true'. It will flip the : to ; and the < to = for the user to get past verify. The user can also enter any arbitrary string that they want to verify, which will probably cause an error as they must get the padding scheme correct.'''
-
 
 def main():
     key = generate_key(16)
@@ -27,7 +24,6 @@ def main():
         result = verify(string, key, iv)
     print(result)
 
-
 def submit(string, key, iv):
     pre = "userid=456;userdata="
     post = ";session-id=31337"
@@ -47,23 +43,20 @@ def verify(string, key, iv):
     byte_string = bytearray(string.encode('latin'))
     text = cbc_decrypt(byte_string, key, iv)
     print(text)
-    text = text.decode('latin')
     if ";admin=true" in text:
         return True
     else:
         return False
 
-
-
 def cbc_decrypt(text, key, iv):
-    decrypt = AES.new(key, AES.MODE_CBC, iv)
-    string = decrypt.decrypt(text)
-    #for i in range(0, len(text), 16):
-    #    pt = (int.from_bytes(decrypt.decrypt(int.from_bytes(text[i:i+16], "big")), "big") ^ int.from_bytes(iv, "big"))
-    #    print(type(pt))
-    #    iv = text[i:i+16]
-    return string
-
+    decrypt = AES.new(key, AES.MODE_ECB)
+    pt = ""
+    for i in range(0, len(text), 16):
+        arg1 = int.from_bytes(decrypt.decrypt(text[i:i+16]), "big")
+        arg2 = int.from_bytes(iv, "big")
+        pt += (arg1 ^ arg2).to_bytes(16, "big").decode('latin')
+        iv = text[i:i+16]
+    return pt
 
 def cbc_encrypt(text, key, iv):
     encrypt = AES.new(key, AES.MODE_ECB)
@@ -72,7 +65,6 @@ def cbc_encrypt(text, key, iv):
         iv = encrypt.encrypt((int.from_bytes(bytes(text[i:i+16]), "big") ^ int.from_bytes(iv, "big")).to_bytes(16, "big"))
         string += iv.decode('latin')
     return string
-
 
 def pkcs(plaintext):
     l = len(plaintext)
@@ -86,7 +78,6 @@ def pkcs(plaintext):
 
 def generate_key(num_bytes:int) -> bytes:
     return get_random_bytes(num_bytes)
-
 
 if __name__ == "__main__":
     main()
