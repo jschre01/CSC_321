@@ -15,7 +15,7 @@ def main():
     plaintext = f.read()
 
     
-    text = pad(bytearray(plaintext.encode('utf-8')), 8)
+    text = pad(bytearray(plaintext), 8)
 
     file_ecb = open("ecb_encrypt.txt", "w")
     file_cbc = open("cbc_encrypt.txt", "w")

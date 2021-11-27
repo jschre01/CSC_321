@@ -32,7 +32,7 @@ def xor_bytes(byte_string1: bytes, byte_string2: bytes) -> bytes:
     if len(byte_string1) != len(byte_string2):
         raise ValueError(f"bytes are not the same length: {len(byte_string1)} and {len(byte_string2)}")
 
-    xor = b''
+    xor = b'' 
     pbar = ProgressBar()
     for c in pbar(range(len(byte_string1))):
         xor += (byte_string1[c] ^ byte_string2[c]).to_bytes(1, 'big')

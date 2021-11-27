@@ -3,8 +3,8 @@ from sys import argv
 from os import urandom
 
 def main():
-    if len(argv) != 3:
-        print("Usage: task2.py <input file> <output file>")
+    if len(argv) != 4:
+        print("Usage: task2.py <input file> <output ciphertext file> <output plaintext file>")
         exit(1)
     with open(argv[1], 'r') as fd1:
         plaintext = fd1.read()
@@ -26,12 +26,16 @@ def main():
 
         print(f"Ciphertext string: {ciphertext_string}")
         decrypted_hex_text = xor_strings(ciphertext_string, key_str)
+
+        with open(argv[2], 'w') as fd2:
+            fd2.write(ciphertext_string)
+
         print(f"Plaintext Hex: {decrypted_hex_text}")
 
         decrypted_string_text = convert_from_hex(decrypted_hex_text)
         print(f"Plaintext: {decrypted_string_text}")
 
-        with open(argv[2], 'w') as fd2:
+        with open(argv[3], 'w') as fd2:
             fd2.write(decrypted_string_text)
 
 # Converts character string to hex string
