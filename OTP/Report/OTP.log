@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.5.29)  27 NOV 2021 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.27)  1 DEC 2021 00:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -121,87 +121,83 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/home/jaxon/git/CSC_321/OTP/Report/../task1.py)
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 71.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 70.
  (/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/jaxon/git/CSC_321/OTP/Report/../task2.py [2]) (/home/jaxon/git/CSC_321/OTP/Report/../task3.py [3])
-<Images/mustang.jpg, id=19, 187.27658pt x 171.2938pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/jaxon/git/CSC_321/OTP/Report/../task2.py [2]) (/home/jaxon/git/CSC_321/OTP/Report/../task3.py [3]) [4]
+<Images/mustang.jpg, id=22, 187.27658pt x 171.2938pt>
 File: Images/mustang.jpg Graphic file (type jpg)
 <use Images/mustang.jpg>
-Package pdftex.def Info: Images/mustang.jpg  used on input line 104.
+Package pdftex.def Info: Images/mustang.jpg  used on input line 113.
 (pdftex.def)             Requested size: 113.81102pt x 104.09698pt.
-<Images/cp-logo.jpg, id=20, 541.02126pt x 494.84875pt>
+<Images/cp-logo.jpg, id=23, 541.02126pt x 494.84875pt>
 File: Images/cp-logo.jpg Graphic file (type jpg)
 <use Images/cp-logo.jpg>
-Package pdftex.def Info: Images/cp-logo.jpg  used on input line 105.
+Package pdftex.def Info: Images/cp-logo.jpg  used on input line 114.
 (pdftex.def)             Requested size: 113.81102pt x 104.09497pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4]
-<Images/mustang_cipher.jpg, id=25, 187.27658pt x 171.2938pt>
+<Images/mustang_cipher.jpg, id=24, 187.27658pt x 171.2938pt>
 File: Images/mustang_cipher.jpg Graphic file (type jpg)
 <use Images/mustang_cipher.jpg>
-Package pdftex.def Info: Images/mustang_cipher.jpg  used on input line 115.
+Package pdftex.def Info: Images/mustang_cipher.jpg  used on input line 123.
 (pdftex.def)             Requested size: 113.81102pt x 104.09698pt.
-<Images/cp_cipher.jpg, id=26, 541.02126pt x 494.84875pt>
+<Images/cp_cipher.jpg, id=25, 541.02126pt x 494.84875pt>
 File: Images/cp_cipher.jpg Graphic file (type jpg)
 <use Images/cp_cipher.jpg>
-Package pdftex.def Info: Images/cp_cipher.jpg  used on input line 116.
+Package pdftex.def Info: Images/cp_cipher.jpg  used on input line 124.
 (pdftex.def)             Requested size: 113.81102pt x 104.09497pt.
 File: Images/mustang.jpg Graphic file (type jpg)
 <use Images/mustang.jpg>
-Package pdftex.def Info: Images/mustang.jpg  used on input line 124.
+Package pdftex.def Info: Images/mustang.jpg  used on input line 132.
 (pdftex.def)             Requested size: 113.81102pt x 104.09698pt.
 File: Images/cp-logo.jpg Graphic file (type jpg)
 <use Images/cp-logo.jpg>
-Package pdftex.def Info: Images/cp-logo.jpg  used on input line 125.
+Package pdftex.def Info: Images/cp-logo.jpg  used on input line 133.
 (pdftex.def)             Requested size: 113.81102pt x 104.09497pt.
- (/home/jaxon/git/CSC_321/OTP/Report/../task4.py [5 </home/jaxon/git/CSC_321/OTP/Report/Images/mustang.jpg> </home/jaxon/git/CSC_321/OTP/Report/Images/cp-logo.jpg> </home/jaxon/git/CSC_321/OTP/Report/Images/mustang_cipher.jpg> </home/jaxon/git/CSC_321/OTP/Report/Images/cp_cipher.jpg>] [6]) [7]
+ [5 </home/jaxon/git/CSC_321/OTP/Report/Images/mustang.jpg> </home/jaxon/git/CSC_321/OTP/Report/Images/cp-logo.jpg> </home/jaxon/git/CSC_321/OTP/Report/Images/mustang_cipher.jpg> </home/jaxon/git/CSC_321/OTP/Report/Images/cp_cipher.jpg>] (/home/jaxon/git/CSC_321/OTP/Report/../task4.py [6])
 File: Images/mustang.jpg Graphic file (type jpg)
 <use Images/mustang.jpg>
-Package pdftex.def Info: Images/mustang.jpg  used on input line 144.
+Package pdftex.def Info: Images/mustang.jpg  used on input line 158.
 (pdftex.def)             Requested size: 113.81102pt x 104.09698pt.
 File: Images/cp-logo.jpg Graphic file (type jpg)
 <use Images/cp-logo.jpg>
-Package pdftex.def Info: Images/cp-logo.jpg  used on input line 145.
+Package pdftex.def Info: Images/cp-logo.jpg  used on input line 159.
 (pdftex.def)             Requested size: 113.81102pt x 104.09497pt.
+ [7]
 <Images/mustang-2tp.jpg, id=37, 541.02126pt x 494.84875pt>
 File: Images/mustang-2tp.jpg Graphic file (type jpg)
 <use Images/mustang-2tp.jpg>
-Package pdftex.def Info: Images/mustang-2tp.jpg  used on input line 153.
+Package pdftex.def Info: Images/mustang-2tp.jpg  used on input line 168.
 (pdftex.def)             Requested size: 113.81102pt x 104.09497pt.
 <Images/cp-logo-2tp.jpg, id=38, 541.02126pt x 494.84875pt>
 File: Images/cp-logo-2tp.jpg Graphic file (type jpg)
 <use Images/cp-logo-2tp.jpg>
-Package pdftex.def Info: Images/cp-logo-2tp.jpg  used on input line 154.
+Package pdftex.def Info: Images/cp-logo-2tp.jpg  used on input line 169.
 (pdftex.def)             Requested size: 113.81102pt x 104.09497pt.
 <Images/xor.jpg, id=39, 541.02126pt x 494.84875pt>
 File: Images/xor.jpg Graphic file (type jpg)
 <use Images/xor.jpg>
-Package pdftex.def Info: Images/xor.jpg  used on input line 162.
+Package pdftex.def Info: Images/xor.jpg  used on input line 177.
 (pdftex.def)             Requested size: 113.81102pt x 104.09497pt.
  [8 </home/jaxon/git/CSC_321/OTP/Report/Images/mustang-2tp.jpg> </home/jaxon/git/CSC_321/OTP/Report/Images/cp-logo-2tp.jpg> </home/jaxon/git/CSC_321/OTP/Report/Images/xor.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 200.
+(Font)              <10.95> on input line 215.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 200.
+(Font)              <8> on input line 215.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 200.
+(Font)              <6> on input line 215.
  [9] (/home/jaxon/git/CSC_321/OTP/Report/OTP.aux) ) 
 Here is how much of TeX's memory you used:
- 3579 strings out of 478994
- 48960 string characters out of 5864751
- 700831 words of memory out of 5000000
- 21049 multiletter control sequences out of 15000+600000
+ 3578 strings out of 478994
+ 48948 string characters out of 5864750
+ 700817 words of memory out of 5000000
+ 21048 multiletter control sequences out of 15000+600000
  408965 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,6n,74p,338b,1752s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on /home/jaxon/git/CSC_321/OTP/Report/OTP.pdf (9 pages, 2073317 bytes).
+Output written on /home/jaxon/git/CSC_321/OTP/Report/OTP.pdf (9 pages, 2074440 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream

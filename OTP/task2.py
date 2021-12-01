@@ -3,38 +3,28 @@ from sys import argv
 from os import urandom
 
 def main():
+
     if len(argv) != 4:
         print("Usage: task2.py <input file> <output ciphertext file> <output plaintext file>")
         exit(1)
+
     with open(argv[1], 'r') as fd1:
         plaintext = fd1.read()
 
+        # Generate random key in correct format
         key_bytes = urandom(len(plaintext))
         key_str = b64encode(key_bytes).decode('UTF-8')
         key_str = key_str[0:len(plaintext)]
-        key_hex = convert_to_hex(key_str)
 
-        print(f"Plaintext:  {plaintext}")
-        print(f"Key string: {key_str}")
-        print(f"Key Length: {len(key_str)}, Plaintext Length: {len(plaintext)}")
-        print(f"Key Hex:        {key_hex}")
-
+        # Generate ciphertext and write to file
         ciphertext_hex = xor_strings(plaintext, key_str)
-        print(f"Ciphertext hex: {ciphertext_hex}")
-
         ciphertext_string = convert_from_hex(ciphertext_hex)
-
-        print(f"Ciphertext string: {ciphertext_string}")
-        decrypted_hex_text = xor_strings(ciphertext_string, key_str)
-
         with open(argv[2], 'w') as fd2:
             fd2.write(ciphertext_string)
 
-        print(f"Plaintext Hex: {decrypted_hex_text}")
-
+        # Decrypt ciphertext and write plaintext to file
+        decrypted_hex_text = xor_strings(ciphertext_string, key_str)
         decrypted_string_text = convert_from_hex(decrypted_hex_text)
-        print(f"Plaintext: {decrypted_string_text}")
-
         with open(argv[3], 'w') as fd2:
             fd2.write(decrypted_string_text)
 

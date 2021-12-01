@@ -45,8 +45,7 @@
 \begin{document}
 \hfill\vbox{\hbox{Jaxon Haws}
 		\hbox{Jonathan Schreiber}	
-		\hbox{CPE 321, Section 3}	
-		\hbox{Assignment: OTP}}\par
+		\hbox{CPE 321, Section 3}}\par
 
 \bigskip
 \centerline{\Large\bf Assignment: OTP}\par
@@ -88,6 +87,14 @@ ciphertext using the same random key.
       \end{tabbing}}
 
 \section{Task 3}
+  For task 3, we initially took our program from Task 2 and tried to retrofit 
+  it to fullfill the task at hand. However, since Task 2 was a retrofit of Task 
+  1, it was difficult to deal with the different stages that were being 
+  handled in the previous task. To alleviate this, we did a bit of a rewrite of the
+  structure of the program and added the portion for removing and appending the 
+  BMP header to the file. This additional step was as simple as reading the 
+  first 54 bytes, saving them without encrypting them, and writing them to new 
+  image file first. 
   \subsection{Code}
     \lstinputlisting[language=Python]{../task3.py}
   \subsection{Usage}
@@ -98,6 +105,8 @@ ciphertext using the same random key.
       \$ diff mustang.bmp decrypted-mustang.bmp\\
       \$ diff cp-logo.bmp decrypted-cp-logo.bmp\\
     \end{tabbing}}
+
+  \pagebreak
   \subsubsection{Plaintext Images}
     \begin{figure}[h!]
       \centering
@@ -107,7 +116,6 @@ ciphertext using the same random key.
       \label{fig:Plaintext_Images}
     \end{figure}
 
-  \pagebreak
 
   \subsubsection{Ciphertext Images}
     \begin{figure}[!h]
@@ -128,6 +136,13 @@ ciphertext using the same random key.
     \end{figure}
 
 \section{Task 4}
+  Task 4 wasn't particularly difficult after having completed Task 3. The only
+  difference now being we are encrypting 2 images with the same key, then we are
+  XORing the bytes of the images (without the headers) together to form a new image.
+  We weren't expecting the resulting image to be a combination of the two original images, 
+  however, we were expecting for there to be something interesting that wasn't static. 
+  With this task, we also decided to move away from commandline arguments to
+  streamline the scope of this program. 
   \subsection{Code}
     \lstinputlisting[language=Python]{../task4.py}
   \subsection{Usage}
@@ -136,7 +151,6 @@ ciphertext using the same random key.
       \$ python3 task4.py\\
       \end{tabbing}}
 
-  \pagebreak
 
     \subsubsection{Plaintext Images}
       \begin{figure}[ht!p]
@@ -147,6 +161,7 @@ ciphertext using the same random key.
         \label{fig:Plaintext_Images_Task4}
       \end{figure}
 
+    \pagebreak
     \subsubsection{Ciphertext Images}
       \begin{figure}[ht!p]
         \centering
