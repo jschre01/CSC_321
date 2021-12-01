@@ -83,7 +83,13 @@ ciphertext using the same random key.
     \lstinputlisting[language=Python]{../task2.py}
   \subsection{Usage}
     {\tt\begin{tabbing}                                                                                                                                                                     
-       \$ python3 task2.py plaintext.txt encrypted.txt\\
+       \$ python3 task2.py plaintext.txt encrypted.txt plaintext-copy.txt\\
+       \$ diff plaintext.txt plaintext-copy.txt\\
+       Test Example:\\
+       \$ python3 task2.py task2.py encrypted.txt task2.txt\\
+       \$ diff task2.py task2.txt\\
+       \$ diff task2.py encrypted.txt\\
+       task2.py and encrypted.py will be different on every line
       \end{tabbing}}
 
 \section{Task 3}
