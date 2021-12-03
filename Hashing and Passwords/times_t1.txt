@@ -1,0 +1,48 @@
+Menu
+a.) Hash arbitrary inputs
+b.) Hash 2 arbitrary inputs whose Hamming Distance is 1 bit
+c.) Hash collisions with 8-50 bits
+Enter a choice: c
+COLLISION at 8 bits: {11100111                                          } : {3a      } and {36      } in 0.00028634071350097656 seconds with 11 inputs
+COLLISION at 9 bits: {111001111                                         } : {3a      } and {36      } in 0.00013828277587890625 seconds with 11 inputs
+COLLISION at 10 bits: {1100010101                                        } : {64      } and {3e      } in 0.0005180835723876953 seconds with 53 inputs
+COLLISION at 11 bits: {11000101011                                       } : {64      } and {3e      } in 0.00047087669372558594 seconds with 53 inputs
+COLLISION at 12 bits: {110001010110                                      } : {64      } and {3e      } in 0.0004200935363769531 seconds with 53 inputs
+COLLISION at 13 bits: {1101010110101                                     } : {3048    } and {c289    } in 0.004891872406005859 seconds with 121 inputs
+COLLISION at 14 bits: {11010101101011                                    } : {3048    } and {c289    } in 0.0028913021087646484 seconds with 121 inputs
+COLLISION at 15 bits: {111111011110011                                   } : {30c290  } and {65      } in 0.003133535385131836 seconds with 193 inputs
+COLLISION at 16 bits: {1111110111100110                                  } : {30c290  } and {65      } in 0.0031881332397460938 seconds with 193 inputs
+COLLISION at 17 bits: {11010000000111100                                 } : {317b    } and {3065    } in 0.004262685775756836 seconds with 268 inputs
+COLLISION at 18 bits: {110110011111001011                                } : {3255    } and {3159    } in 0.004828453063964844 seconds with 326 inputs
+COLLISION at 19 bits: {1000010110110111110                               } : {3954    } and {376e    } in 0.008095741271972656 seconds with 997 inputs
+COLLISION at 20 bits: {10000101101101111100                              } : {3954    } and {376e    } in 0.0045397281646728516 seconds with 997 inputs
+COLLISION at 21 bits: {100001011011011111001                             } : {3954    } and {376e    } in 0.0036351680755615234 seconds with 997 inputs
+COLLISION at 22 bits: {1000010110110111110011                            } : {3954    } and {376e    } in 0.003204345703125 seconds with 997 inputs
+COLLISION at 23 bits: {10111000110001011100000                           } : {4346    } and {50      } in 0.004862785339355469 seconds with 1943 inputs
+COLLISION at 24 bits: {101110001100010111000001                          } : {4346    } and {50      } in 0.004952430725097656 seconds with 1943 inputs
+COLLISION at 25 bits: {1011100011000101110000010                         } : {4346    } and {50      } in 0.003926515579223633 seconds with 1943 inputs
+COLLISION at 26 bits: {10100110100101110100010011                        } : {303278  } and {4ec286  } in 0.06597542762756348 seconds with 9575 inputs
+COLLISION at 27 bits: {101110001100010111000001001                       } : {306760  } and {50      } in 0.06692910194396973 seconds with 14587 inputs
+COLLISION at 28 bits: {1011100011000101110000010010                      } : {306760  } and {50      } in 0.0667257308959961 seconds with 14587 inputs
+COLLISION at 29 bits: {11111010011100000000001100111                     } : {307538  } and {467e    } in 0.06658482551574707 seconds with 15877 inputs
+COLLISION at 30 bits: {111010111001001010100010001110                    } : {337652  } and {324a6d  } in 0.1050117015838623 seconds with 43358 inputs
+COLLISION at 31 bits: {1110101110010010101000100011100                   } : {337652  } and {324a6d  } in 0.10492920875549316 seconds with 43358 inputs
+COLLISION at 32 bits: {10010001110010001111100010100000                  } : {35c29042} and {3037c289} in 0.1363229751586914 seconds with 64052 inputs
+COLLISION at 33 bits: {101000000100110111110111100100100                 } : {3d3c5d  } and {304b5b  } in 0.23238682746887207 seconds with 129153 inputs
+COLLISION at 34 bits: {1010000001001101111101111001001000                } : {3d3c5d  } and {304b5b  } in 0.2333536148071289 seconds with 129153 inputs
+COLLISION at 35 bits: {10100001000101110010011101001010011               } : {414a6f  } and {326350  } in 0.2856111526489258 seconds with 166886 inputs
+COLLISION at 36 bits: {101000010001011100100111010010100111              } : {414a6f  } and {326350  } in 0.29010510444641113 seconds with 166886 inputs
+COLLISION at 37 bits: {1011011000000001111000110000011101011             } : {547f45  } and {3c4257  } in 0.5533890724182129 seconds with 345161 inputs
+COLLISION at 38 bits: {10011110111101101101010111100000111101            } : {5a3945  } and {4bc28e47} in 0.6198172569274902 seconds with 393325 inputs
+COLLISION at 39 bits: {100111101111011011010101111000001111011           } : {5a3945  } and {4bc28e47} in 0.6306817531585693 seconds with 393325 inputs
+COLLISION at 40 bits: {1001111011110110110101011110000011110110          } : {5a3945  } and {4bc28e47} in 0.6339530944824219 seconds with 393325 inputs
+COLLISION at 41 bits: {10100000000101000110011001010110101011011         } : {3157787a} and {314f426a} in 8.17203950881958 seconds with 2097321 inputs
+COLLISION at 42 bits: {101000000001010001100110010101101010110110        } : {3157787a} and {314f426a} in 8.150829315185547 seconds with 2097321 inputs
+COLLISION at 43 bits: {1010000000010100011001100101011010101101100       } : {3157787a} and {314f426a} in 8.1416757106781 seconds with 2097321 inputs
+COLLISION at 44 bits: {10100000000101000110011001010110101011011001      } : {3157787a} and {314f426a} in 8.14134693145752 seconds with 2097321 inputs
+COLLISION at 45 bits: {100010000111101101110100010100000100101111101     } : {39516258} and {3673c28256} in 19.698805332183838 seconds with 8899880 inputs
+COLLISION at 46 bits: {1000100001111011011101000101000001001011111011    } : {39516258} and {3673c28256} in 20.17238187789917 seconds with 8899880 inputs
+COLLISION at 47 bits: {10101111010110001101100101000100100110000011010   } : {403374c283} and {3f7b5460} in 34.58359408378601 seconds with 14643604 inputs
+COLLISION at 48 bits: {110000100101111110101001100000001110001101000101  } : {45785576} and {42465170} in 43.809300661087036 seconds with 19534412 inputs
+COLLISION at 49 bits: {1110101100011101011111110010111000001101011100000 } : {463d6833} and {3d7e5758} in 44.96479415893555 seconds with 19875379 inputs
+COLLISION at 50 bits: {11101011000111010111111100101110000011010111000001} : {463d6833} and {3d7e5758} in 44.560574769973755 seconds with 19875379 inputs
