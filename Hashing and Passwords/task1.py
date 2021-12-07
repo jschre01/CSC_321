@@ -72,8 +72,8 @@ def generate_collisions(bit_len: int):
             if hash_bits in htable:
                 delta = time() - start_time
                 print(f"COLLISION at {bit_len} bits: {{{hash_bits:50}}} : "
-                f"{{{plaintext.encode('utf-8').hex():8}}} and {{{htable[hash_bits].encode('utf-8').hex():8}}} "
-                f"in {delta:9} seconds with {input_count} inputs")
+                f"{{{plaintext.encode('utf-8').hex():10}}} and {{{htable[hash_bits].encode('utf-8').hex():10}}} "
+                f"in {delta:7.4f} seconds with {input_count} inputs")
                 return
             else:
                 htable[hash_bits] = plaintext
